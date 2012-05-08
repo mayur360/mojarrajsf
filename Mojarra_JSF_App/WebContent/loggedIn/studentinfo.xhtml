@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>First page to display</title>
+</head>
+<body>
+	<f:view>
+		<h3>To Find Information about Student Please enter following values</h3>
+		<h:form>
+			<h:panelGrid columns="2">
+				<h:outputText value="Name Of The Student"></h:outputText>
+				<h:inputText value="Fisrt Name"></h:inputText>
+				<h:outputText value="Roll Number"></h:outputText>
+				<h:inputText value="Roll Number"></h:inputText>
+				<h:commandButton value="Show Information" action="#{studentInfo.showInfo}"></h:commandButton>
+				<h:commandButton value="Back" action="#{studentInfo.backHome}"></h:commandButton>
+			</h:panelGrid>
+		</h:form>
+	</f:view>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13360404232340" configfile="/Mojarra_JSF_App/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="signup/SignUp.xhtml" x="122" y="562" id="pf133611598495329" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf133637624417122 pf133637624417123 pf133637624417124 pf133637624417125 pf133637679421836 pf133637679421837 pf133637679421838" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="Login.xhtml" x="122" y="946" id="pf133611598495330" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" path="/Login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="login.xhtml" id="pf133637618125012" referenceLink="//@navigationRule.2/@navigationCase.2/@toViewId|" outlinks="pf133637618125013 pf133637618501514 pf133637621784320" inlinks="pf133637618125013 pf133637624417124" path="/login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="home.xhtml" id="pf133637618501515" referenceLink="//@navigationRule.2/@navigationCase.3/@toViewId|" inlinks="pf133637618501514 pf133637624417122 pf133637624417125" path="/home.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="signup/signup.xhtml" id="pf133637621784321" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf133637621784320" path="/signup/signup.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="signup.xhtml" id="pf133637624417127" referenceLink="//@navigationRule.2/@navigationCase.1/@toViewId|" inlinks="pf133637624417123" path="/signup.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="loggedIn/addinfo.xhtml" id="pf133637679421839" referenceLink="//@navigationRule.2/@navigationCase.4/@toViewId|" inlinks="pf133637679421836" path="/loggedIn/addinfo.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="loggedIn/studentgrade.xhtml" id="pf133637679421840" referenceLink="//@navigationRule.2/@navigationCase.5/@toViewId|" inlinks="pf133637679421837" path="/loggedIn/studentgrade.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="loggedIn/studentinfo.xhtml" id="pf133637679421841" referenceLink="//@navigationRule.2/@navigationCase.6/@toViewId|" inlinks="pf133637679421838" path="/loggedIn/studentinfo.xhtml"/>
+  <links id="pf133637618125013" target="pf133637618125012" source="pf133637618125012" outcome="failed" fromaction="#{loginBean.authenticateUser}"/>
+  <links id="pf133637618501514" target="pf133637618501515" source="pf133637618125012" outcome="succesful" fromaction="#{loginBean.authenticateUser}"/>
+  <links id="pf133637621784320" target="pf133637621784321" source="pf133637618125012" outcome="signup"/>
+  <links id="pf133637624417122" target="pf133637618501515" source="pf133611598495329" outcome="success"/>
+  <links id="pf133637624417123" target="pf133637624417127" source="pf133611598495329" outcome="failed"/>
+  <links id="pf133637624417124" target="pf133637618125012" source="pf133611598495329" outcome="back"/>
+  <links id="pf133637624417125" target="pf133637618501515" source="pf133611598495329" outcome="backHome"/>
+  <links id="pf133637679421836" target="pf133637679421839" source="pf133611598495329" outcome="reset"/>
+  <links id="pf133637679421837" target="pf133637679421840" source="pf133611598495329" outcome="grades"/>
+  <links id="pf133637679421838" target="pf133637679421841" source="pf133611598495329" outcome="studentInfo"/>
+</pageflow:Pageflow>

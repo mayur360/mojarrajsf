@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  
+    xmlns:h="http://java.sun.com/jsf/html"  
+    xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Add Information Of Student</title>
+</head>
+<body>
+<f:view>
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Roll Number"></h:outputLabel>
+			<h:inputText value="#{studentInfo.roll_No}" required="true"></h:inputText>
+			
+			<h:outputLabel value="First Name"></h:outputLabel>
+			<h:inputText value="#{studentInfo.fname}" required="true"></h:inputText>
+			
+			<h:outputLabel value="Last Name"></h:outputLabel>
+			<h:inputText value="#{studentInfo.lname}" required="true"></h:inputText>
+			
+			<h:outputLabel value="Class"></h:outputLabel>
+			<h:inputText value="#{studentInfo.sClass}" required="true"></h:inputText>
+			
+			<h:outputLabel value="Division"></h:outputLabel>
+			<h:inputText value="#{studentInfo.division}" required="true"></h:inputText>
+			
+			<h:outputLabel value="Address"></h:outputLabel>
+			<h:inputTextarea value="#{studentInfo.address}" cols="27" rows="4" required="true"></h:inputTextarea>
+				<h:outputLabel value="Contact Number"></h:outputLabel>
+				<h:inputText value="#{studentInfo.contactNo}" required="true"></h:inputText>
+			
+			<h:outputLabel value="Gender"></h:outputLabel>
+			
+				<h:panelGrid columns="2">
+					<h:selectOneRadio  value="Gender">
+					Male <f:selectItem itemValue="Male" />
+  				  Female <f:selectItem itemValue="Female"/>
+  				  </h:selectOneRadio>
+				</h:panelGrid>
+			
+			
+			<h:commandButton value="Add Info" action="#{studentInfo.addInfo}"></h:commandButton>
+			<h:commandButton value="Back" action="#{studentInfo.backHome}" immediate="true"></h:commandButton>
+			<h:commandButton value="Reset" action="#{studentInfo.doReset}"></h:commandButton>
+		</h:panelGrid>
+	</h:form>
+</f:view>
+</body>
+</html>
