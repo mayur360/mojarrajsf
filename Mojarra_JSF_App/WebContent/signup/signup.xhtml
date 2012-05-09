@@ -10,19 +10,19 @@
 		<h:form>
 			<h:panelGrid columns="2">
 				<h:outputLabel value="First Name"></h:outputLabel>
-				<h:inputText value="#{signUp.fname}" required="true"></h:inputText>
+				<h:inputText value="#{signUp.firstName}" required="true"></h:inputText>
 				<h:outputLabel value="Last Name"></h:outputLabel>
-				<h:inputText value="#{signUp.lname}" required="true"></h:inputText>
+				<h:inputText value="#{signUp.lastName}" required="true"></h:inputText>
 				<h:outputLabel value="User Name"></h:outputLabel>
 				<h:inputText value="#{signUp.userName}" required="true"></h:inputText>
 				<h:outputLabel value="Password"></h:outputLabel>
-				<h:inputSecret value="#{signUp.pwd}" required="true"></h:inputSecret>
+				<h:inputSecret value="#{signUp.password}" required="true"></h:inputSecret>
 				<h:outputLabel value="Confirm Password"></h:outputLabel>
-				<h:inputSecret value="#{signUp.confpwd}" required="true"></h:inputSecret>
+				<h:inputSecret value="#{signUp.conformPassword}" required="true"></h:inputSecret>
 				<h:outputLabel value="Address"></h:outputLabel>
 				<h:inputTextarea rows="4" cols="27" value="#{signUp.address}"></h:inputTextarea>
 				<h:outputLabel value="Email Address"></h:outputLabel>
-				<h:inputText value="#{signUp.emailadd}" required="true"></h:inputText>
+				<h:inputText value="#{signUp.emailAdd}" required="true"></h:inputText>
 				<h:outputLabel value="I am "></h:outputLabel>
 				<h:selectOneMenu value="#{signUp.gender}">
 					<f:selectItem itemValue="Male"></f:selectItem>

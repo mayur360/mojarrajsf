@@ -13,29 +13,29 @@ public class SignUpBean implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 4222374048972008357L;
-	private String fname;
-	private String lname;
+	private String firstName;
+	private String lastName;
 	private String userName;
-	private String pwd;
-	private String confpwd;
+	private String password;
+	private String conformPassword;
 	private String address;
 	private String emailAdd;
 	private String gender;
 
-	public String getFname() {
-		return fname;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFname(String fname) {
-		this.fname = fname;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getLname() {
-		return lname;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setLname(String lname) {
-		this.lname = lname;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getUserName() {
@@ -46,20 +46,20 @@ public class SignUpBean implements Serializable {
 		this.userName = userName;
 	}
 
-	public String getPwd() {
-		return pwd;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public String getConfpwd() {
-		return confpwd;
+	public String getConformPassword() {
+		return conformPassword;
 	}
 
-	public void setConfpwd(String confpwd) {
-		this.confpwd = confpwd;
+	public void setConformPassword(String conformPassword) {
+		this.conformPassword = conformPassword;
 	}
 
 	public String getAddress() {
@@ -95,9 +95,10 @@ public class SignUpBean implements Serializable {
 	public String doRegister() {
 		System.out.println("Inside register method");
 		String status = null;
-		if (!getFname().isEmpty() && !getLname().isEmpty() && !getUserName().isEmpty() && !getPwd().isEmpty()
-				&& !getConfpwd().isEmpty() && !getEmailAdd().isEmpty() && !getGender().isEmpty()) {
-			if (getPwd().equals(getConfpwd())) {
+		if (!getFirstName().isEmpty() && !getLastName().isEmpty() && !getUserName().isEmpty()
+				&& !getPassword().isEmpty() && !getConformPassword().isEmpty() && !getEmailAdd().isEmpty()
+				&& !getGender().isEmpty()) {
+			if (getPassword().equals(getConformPassword())) {
 				status = "success";
 				;
 			}

@@ -1,25 +1,31 @@
 package faceletbean;
 
+import java.io.Serializable;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 @ManagedBean(name = "loginBean")
 @SessionScoped
-public class LoginBean {
+public class LoginBean implements Serializable {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -8619434251652355587L;
-	private String username;
+	private static final long serialVersionUID = -9097631887148949702L;
+	/**
+	 * 
+	 */
+
+	private String userName;
 	private String password;
 
-	public String getUsername() {
-		return username;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getPassword() {
@@ -37,9 +43,9 @@ public class LoginBean {
 	}
 
 	public String authenticateUser() {
-		System.out.println("User name is " + getUsername());
+		System.out.println("User name is " + getUserName());
 		System.out.println("Password is " + getPassword());
-		if (username.equals("Mayuresh") && password.equals("mayuresh")) {
+		if (userName.equals("Mayuresh") && password.equals("mayuresh")) {
 			System.out.println("Login is succesful");
 			return "succesful";
 		} else {

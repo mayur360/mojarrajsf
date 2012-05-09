@@ -1,5 +1,6 @@
 package faceletbean;
 
+import java.io.Serializable;
 import java.sql.SQLException;
 
 import javax.faces.bean.ManagedBean;
@@ -7,9 +8,12 @@ import javax.faces.bean.ViewScoped;
 
 @ManagedBean(name = "studentInfo")
 @ViewScoped
-public class StudentInfoProcessingBean {
+public class StudentInfoProcessingBean implements Serializable {
 
-	private static final long serialVersionUID = 1773837052165664939L;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5094827581022476636L;
 	private Integer rollNo;
 	private String firstName;
 	private String lastName;
@@ -20,96 +24,64 @@ public class StudentInfoProcessingBean {
 	private String grade;
 
 	public Integer getRollNo() {
-	if(rollNo== null){
-		return new rollNo
-	}
-	else{
 		return rollNo;
-	}}
+	}
 
 	public void setRollNo(Integer rollNo) {
 		this.rollNo = rollNo;
 	}
 
 	public String getFirstName() {
-	if(firstName== null){
-		return new firstName
-	}
-	else{
 		return firstName;
-	}}
+	}
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
 	public String getLastName() {
-	if(lastName== null){
-		return new lastName
-	}
-	else{
 		return lastName;
-	}}
+	}
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 
 	public String getStudentClass() {
-	if(studentClass== null){
-		return new studentClass
-	}
-	else{
 		return studentClass;
-	}}
+	}
 
 	public void setStudentClass(String studentClass) {
 		this.studentClass = studentClass;
 	}
 
 	public String getDivision() {
-	if(division== null){
-		return new division
-	}
-	else{
 		return division;
-	}}
+	}
 
 	public void setDivision(String division) {
 		this.division = division;
 	}
 
 	public String getAddress() {
-	if(address== null){
-		return new address
-	}
-	else{
 		return address;
-	}}
+	}
 
 	public void setAddress(String address) {
 		this.address = address;
 	}
 
 	public String getContactNo() {
-	if(contactNo== null){
-		return new contactNo
-	}
-	else{
 		return contactNo;
-	}}
+	}
 
 	public void setContactNo(String contactNo) {
 		this.contactNo = contactNo;
 	}
 
 	public String getGrade() {
-	if(grade== null){
-		return new grade
-	}
-	else{
 		return grade;
-	}}
+	}
 
 	public void setGrade(String grade) {
 		this.grade = grade;
@@ -119,16 +91,16 @@ public class StudentInfoProcessingBean {
 	public String addInfo() throws SQLException, ClassNotFoundException {
 		String sql_statement = "insert into student_info(roll_number,fname,lname,sclass,division,grade,address,contact)values("
 				+ "'"
-				+ this.getRoll_No()
+				+ this.getRollNo()
 				+ "',"
 				+ "'"
-				+ this.getFname()
+				+ this.getFirstName()
 				+ "',"
 				+ "'"
-				+ this.getLname()
+				+ this.getLastName()
 				+ "',"
 				+ "'"
-				+ this.getsClass()
+				+ this.getStudentClass()
 				+ "',"
 				+ "'"
 				+ this.getDivision()
